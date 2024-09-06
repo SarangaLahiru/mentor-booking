@@ -1,0 +1,26 @@
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold text-center mb-8">Admin Dashboard</h1>
+  <div class="bg-white p-6 rounded-lg shadow-lg">
+    <h2 class="text-2xl font-bold mb-4">Bookings</h2>
+    <table class="min-w-full table-auto">
+      <thead>
+        <tr>
+          <th class="px-4 py-2">Mentor</th>
+          <th class="px-4 py-2">User</th>
+          <th class="px-4 py-2">Date</th>
+          <th class="px-4 py-2">Time</th>
+          <th class="px-4 py-2">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings">
+          <td class="border px-4 py-2">{{ booking.mentor }}</td>
+          <td class="border px-4 py-2">{{ booking.user }}</td>
+          <td class="border px-4 py-2">{{ booking.date }}</td>
+          <td class="border px-4 py-2">{{ booking.time }}</td>
+          <td class="border px-4 py-2">{{ booking.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

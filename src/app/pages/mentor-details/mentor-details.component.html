@@ -1,0 +1,9 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-2xl font-bold">{{ mentor.name }}</h1>
+    <p class="text-lg">{{ mentor.expertise }}</p>
+    <p class="mt-4">{{ mentor.description }}</p>
+    <a [routerLink]="['/booking', mentor.id]"
+      class="bg-green-500 text-white px-4 py-2 mt-4 inline-block rounded-lg">Book Mentor</a>
+  </div>
+</div>
