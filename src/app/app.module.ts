@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { AuthGuard } from './guards/auth.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { AuthService } from './services/auth.service';
 import { BookingService } from './services/booking.service';
@@ -27,7 +28,7 @@ import { MentorService } from './services/mentor.service';
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [AuthService, MentorService, BookingService],
-  bootstrap: [AppComponent]
+  providers: [AuthService, MentorService, BookingService, AuthGuard],
+
 })
 export class AppModule { }
